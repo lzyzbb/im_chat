@@ -17,7 +17,7 @@ export default {
   dog: "https://api.oick.cn/dog/api.php",
 
   //前后端定义的密钥，AES使用16位
-  cryptojs_key: "$$$$密钥",
+  cryptojs_key: "aoligeimeimaobin",
 
   qiniuUrl: "https://upload.qiniup.com",
   qiniuDownload: "$$$$七牛云下载地址",
