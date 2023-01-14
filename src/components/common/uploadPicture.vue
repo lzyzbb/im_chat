@@ -101,7 +101,7 @@
       // 文件上传成功时的钩子
       handleSuccess(response, file, fileList) {
         let url = this.$constant.qiniuDownload + response.key;
-        this.$common.saveResource(this, this.prefix, url);
+        this.$common.saveResource(this, this.prefix, url, file.size, file.raw.type);
         this.$emit("addPicture", url);
       },
 

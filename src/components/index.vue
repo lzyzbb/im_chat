@@ -648,6 +648,7 @@
       async function getFriendAndGroup() {
         await getImFriend();
         await getImGroup();
+        await nextTick();
         getIm();
       }
 

@@ -36,9 +36,15 @@ export default function (option) {
 
   const formData = new FormData()
   if (option.data) {
+
+    let suffix = ""
+    if (option.file.name.lastIndexOf('.') !== -1) {
+      suffix = option.file.name.substring(option.file.name.lastIndexOf('.'))
+    }
+
     for (const [key, value] of Object.entries(option.data)) {
       if (Array.isArray(value)) formData.append(key, ...value)
-      else if (key === 'key') formData.append(key, value + new Date().getTime() + Math.floor(Math.random() * 1000))
+      else if (key === 'key') formData.append(key, value + new Date().getTime() + Math.floor(Math.random() * 1000) + suffix)
       else formData.append(key, value)
     }
   }
