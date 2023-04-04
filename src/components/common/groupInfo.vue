@@ -233,14 +233,6 @@
       })
 
       function updateInType(currentGroupId, inType) {
-        if ($common.isEmpty(store.state.currentUser.email)) {
-          ElMessage({
-            message: "请先绑定邮箱！",
-            type: 'error'
-          });
-          return;
-        }
-
         $http.post($constant.baseURL + "/imChatGroup/updateGroup", {
           id: props.groups[currentGroupId].id,
           inType: inType
@@ -298,14 +290,6 @@
       }
 
       function changeGroupUserStatus(groupId, item, oldUserStatus, userStatus) {
-        if ($common.isEmpty(store.state.currentUser.email)) {
-          ElMessage({
-            message: "请先绑定邮箱！",
-            type: 'error'
-          });
-          return;
-        }
-
         $http.get($constant.baseURL + "/imChatGroupUser/changeUserStatus", {
           groupId: groupId,
           userId: item.userId,

@@ -73,7 +73,7 @@
     },
 
     created() {
-      if (!this.$common.isEmpty(this.$store.state.currentUser) && !this.$common.isEmpty(this.$store.state.currentUser.email)) {
+      if (!this.$common.isEmpty(this.$store.state.currentUser)) {
         this.getUpToken();
       }
     },
