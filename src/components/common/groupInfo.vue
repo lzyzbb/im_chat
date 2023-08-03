@@ -266,8 +266,8 @@
         }
       }
 
-      function getGroupUser(groupId, current = 1) {
-        $http.get($constant.baseURL + "/imChatGroupUser/getGroupUser", {groupId: groupId, current: current})
+      function getGroupUser(groupId, current = 1, size = 9999) {
+        $http.get($constant.baseURL + "/imChatGroupUser/getGroupUser", {groupId: groupId, current: current, size: size})
           .then((res) => {
             if (!$common.isEmpty(res.data) && !$common.isEmpty(res.data.records)) {
               data.groupUsers = res.data.records;
