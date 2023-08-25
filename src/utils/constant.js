@@ -26,7 +26,7 @@ export default {
   cryptojs_key: "aoligeimeimaobin",
 
   qiniuUrl: "https://upload.qiniup.com",
-  qiniuDownload: "$$$$七牛云访问域名",
+  qiniuDownload: "$$$$七牛云访问域名，仿照【https://file.poetize.cn/】",
 
   before_color_1: "black",
   after_color_1: "linear-gradient(45deg, #f43f3b, #ec008c)",

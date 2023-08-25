@@ -420,7 +420,7 @@
                 </div>
                 <div>
                   <span class="friend-label">简&nbsp;&nbsp;&nbsp;介</span>
-                  <span>{{$common.isEmpty($store.state.currentUser.introduction)?'暂无简介':$store.state.currentUser.introduction}}</span>
+                  <span>{{$common.isEmpty(friends[currentFriendId].introduction)?'暂无简介':friends[currentFriendId].introduction}}</span>
                 </div>
               </div>
             </div>
